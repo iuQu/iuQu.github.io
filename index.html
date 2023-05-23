@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 
@@ -63,19 +65,7 @@
     <div id="Zl">
     </div>
     <script>
-        var u = navigator.userAgent;
-        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-        if (navigator.userAgent.indexOf("QQ/") > -1 && isAndroid == true) {
-            var Zeptoq = document.getElementsByTagName;
-            document.getElementsByTagName = function(a) {
-                if (a == 'meta') {
-                    window.location.href = "https://c.pc.qq.com/middleb.html?pfurl=<?php echo $res['dwz'] ?>";
-                    return;
-                } else {
-                    return Zeptoq.call(document, a);
-                }
-            };
-        }
+       
 
         $(document).ready(function() {
             function getQueryVariable(variable) {
@@ -137,6 +127,7 @@
             $("#rid").attr("height", (($(window).height()) - 5) + "px");
         }
     </script>
+	
 </body>
 
 </html>
